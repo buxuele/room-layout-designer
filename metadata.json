@@ -1,0 +1,6 @@
+{
+  "name": "Room Layout Designer",
+  "description": "An app to design and adjust room layouts with draggable furniture and smart suggestions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

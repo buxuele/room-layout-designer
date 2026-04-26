@@ -265,10 +265,9 @@ export default function App() {
           <button onClick={() => setNotification(null)} className="text-blue-600 hover:text-blue-800">×</button>
         </div>
       )}
-      <header className="bg-white border-b border-gray-200 px-6 py-4 flex-shrink-0 flex justify-between items-center">
+      <header className="bg-white border-b border-gray-200 px-6 py-2 flex-shrink-0 flex justify-between items-center">
         <div>
           <h1 className="text-xl font-bold text-gray-900">房间布局设计器</h1>
-          <p className="text-sm text-gray-500">拖拽家具调整位置，点击选中修改尺寸</p>
         </div>
         <div className="flex items-center space-x-3">
           <button onClick={undo} disabled={historyIndex === 0} className="p-2 text-gray-600 hover:bg-gray-100 rounded-md disabled:opacity-50 disabled:cursor-not-allowed transition-colors" title="撤销">
@@ -285,8 +284,8 @@ export default function App() {
         </div>
       </header>
       <div className="flex flex-1 overflow-hidden relative">
-        <div className={`transition-all duration-300 ease-in-out flex-shrink-0 bg-white border-r border-gray-200 z-10 ${isSidebarOpen ? 'w-80' : 'w-0'}`}>
-          <div className="w-80 h-full">
+        <div className={`transition-all duration-300 ease-in-out flex-shrink-0 bg-white border-r border-gray-200 z-10 overflow-hidden ${isSidebarOpen ? 'w-80' : 'w-0'}`}>
+          <div className="w-80 h-full overflow-y-auto">
             <Sidebar 
               room={room} 
               onUpdateRoom={handleUpdateRoom} 
